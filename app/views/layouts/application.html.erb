@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sambhrama</title>
+  <title>SAMBHRAMA SOURABHA</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<% flash.each do |key, value| %>
-    <div class='flash' id='<%=key%>'>
-        <%= value %>
-    </div>
-<% end %>
-<div id="nav">
-<% if user_signed_in? %>
-	Signed in as <%= current_user.email %>
-<% else %>
-	<%= link_to "Sign up", new_user_registration_path %> |
-	<%= link_to "Sign in", new_user_session_path %>
-<% end %>
-</div>
+<body>	
+	<div id="main">
+		<div id="header">
+			<h1>SAMBHRAMA SOURABHA</h1>
+			<div id="nav">
+				<%= link_to_unless_current 'Home', root_path%> | 
+				<% if user_signed_in? %>
+					 <%= link_to_unless_current "Sign out", destroy_user_session_path, :method=>:delete %>
+				<% else %>
+					<%= link_to_unless_current "Sign up", new_user_registration_path %> |
+					<%= link_to_unless_current "Sign in", new_user_session_path %>
+				<% end %>
+			</div>
+		</div>
+		<div id="content">
+			<% flash.each do |key, value| %>
+    			<div class='<%=key%>' id='notice'>
+        			<%= value %>
+    			</div>
+			<% end %>
 
-<%= yield %>
-<%= link_to "Sign out", destroy_user_session_path, :method=>'delete' %>
+			<%= yield %>
+
+		</div>
+		<div id="footer">
+			<%= link_to 'Terms and Condition', "#"%> | <%= link_to 'About Us', "#"%> | <%= link_to 'Contact Us', "#"%>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 Sambhrama::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.action_mailer.default_url_options = { :host => 'localhost:3001' }
+
   # In the development environment your application's code is reloaded on
   # every request.  This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -16,23 +17,6 @@ Sambhrama::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   
-=begin  
-# config.action_mailer.delivery_method = :sendmail
- config.action_mailer.delivery_method = :smtp 
- config.action_mailer.perform_deliveries = true
- config.action_mailer.raise_delivery_errors = false
- config.action_mailer.default_charset = "utf-8"
- config.action_mailer.default_content_type = "text/html"
-
- config.action_mailer.smtp_settings = {
-   :address => "compassites.net" ,
-   :port => 25,
-   :domain => "compassites.net" ,
-   :authentication => :login,
-   :user_name => "jifflenow@compassites.net" ,
-   :password => "Ji2Hari%ComG8!#"
- }
-=end
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 

@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_one :home_address, :class_name =>'Address', :foreign_key =>'home_id'
+  has_one :business_address, :class_name =>'Address', :foreign_key =>'business_id'
+  has_one :demographic
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

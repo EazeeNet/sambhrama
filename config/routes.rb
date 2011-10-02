@@ -1,5 +1,7 @@
 Sambhrama::Application.routes.draw do
-  devise_for :users
+  get "users/index"
 
+  devise_for :users
+  resource :users
   root :to=> "home#index"
 end
