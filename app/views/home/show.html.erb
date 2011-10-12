@@ -1,0 +1,102 @@
+<style>
+	#home_address, #business_address{
+		display: none;
+	}
+</style>
+<script>
+	$(function(){
+		$('#home').click(function(){
+			$.blockUI({	 message: ($('#home_address')), css: { width: '400px', cursor: 'auto' } });
+		})
+		$('#business').click(function(){
+			$.blockUI({	 message: ($('#business_address')), css: { width: '400px', cursor: 'auto' } });
+		})
+	})
+</script>
+Welcome <%=current_user.email%>
+<br/>
+
+<div id="accordion">
+    <h3><a href="#">Demographic Information</a></h3>
+    <div>
+    	<%= form_for @demographic, :url=>{:controller=>'home', :action=>'create_update'} do |f|%>
+    		<table>
+    			<tr>
+    				<td>First Name:</td>
+    				<td><%= f.text_field :first_name%></td>
+    			</tr>
+    			<tr>
+    				<td>Last Name:</td>
+    				<td><%= f.text_field :last_name%></td>
+    			</tr>
+    			<tr>
+    				<td>Email:</td>
+    				<td><%= f.text_field :email%></td>
+    			</tr>
+    			<tr>
+    				<td>Mobile:</td>
+    				<td><%= f.text_field :mobile%></td>
+    			</tr>
+    			<tr>
+    				<td>DoB:</td>
+    				<td><%= f.date_select :dob, :start_year => 1970%></td>
+    			</tr>
+    			<tr>
+    				<td><a href="javascript:void(0)" id="home">Home Address</a></td>
+    			</tr>
+    			<tr>
+    				<td><a href="javascript:void(0)" id="business">Business Address</a></td>
+    			</tr>
+    			<tr>
+    				<td><a href="javascript:void(0)" id="communication">Communication Address</a></td>
+    			</tr>
+    			<tr id="home_address" >
+    				<td>
+    					<%= fields_for :home_address do |h| %>
+    					<table>
+    						<tr>
+    							<td>Address 1:</td>
+    							<td><%= h.text_field :line1%></td>
+    						</tr>
+    						<tr>
+    							<td>Address 2:</td>
+    							<td><%= h.text_field :line2%></td>
+    						</tr>
+    						<tr>    							
+    							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
+    						</tr>
+    					</table>
+    					<%end%>
+    				</td>
+    			</tr>
+    			<tr id="business_address" >
+    				<td>
+    					<%= fields_for :business_address do |b| %>
+    					<table>
+    						<tr>
+    							<td>Address 1:</td>
+    							<td><%= b.text_field :line1%></td>
+    						</tr>
+    						<tr>
+    							<td>Address 2:</td>
+    							<td><%= b.text_field :line2%></td>
+    						</tr>
+    						<tr>    							
+    							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
+    						</tr>
+    					</table>
+    					<%end%>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td><%= f.submit %></td>
+    			</tr>
+    		</table>
+    	<% end %>
+    	
+    </div>
+    <h3><a href="#">Psychographic Information</a></h3>
+    <div>Second content</div>
+    <h3><a href="#">Become a Member</a></h3>
+    <div>Third content</div>
+</div>

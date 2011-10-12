@@ -1,7 +1,7 @@
 Sambhrama::Application.routes.draw do
-  get "users/index"
-
+ # get "users/index"
+  match 'member_home', :to => 'home#show'
   devise_for :users
-  resource :users
   root :to=> "home#index"
+  match '/:controller(/:action(/:id))'
 end
