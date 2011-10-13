@@ -5,7 +5,7 @@
  *= require_self
  *= require_tree . 
 */
- body{
+ /*body{
   padding: 0px;
   margin:0px auto;
   width:1000px;
@@ -38,4 +38,4 @@
   }
 #accordion{
 	width:600px;
-}
+}*/

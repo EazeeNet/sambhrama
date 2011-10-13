@@ -7,32 +7,49 @@
   <%= csrf_meta_tags %>
 </head>
 <body>	
-	<div id="main">
-		<div id="header">
-			<h1>SAMBHRAMA SOURABHA</h1>
-			<div id="nav">
-				<%= link_to_unless_current 'Home', root_path%> | 
-				<% if user_signed_in? %>
-					 <%= link_to_unless_current "Sign out", destroy_user_session_path, :method=>:delete %>
-				<% else %>
-					<%= link_to_unless_current "Sign up", new_user_registration_path %> |
-					<%= link_to_unless_current "Sign in", new_user_session_path %>
-				<% end %>
+<div id="wrapper">
+    <div id="border_top"></div><!--  END "border_top"  //-->
+    <div id="header" class="clearfix">
+        <div id="logo">
+        	<%= link_to(image_tag('/images/logo.png'), root_path, :id=>"lclogo")%>
+        </div><!--  END "logo"  //-->
+        <div id="header_contacts">phone: +420 776 223 443<br />e-mail: support@londoncreative.co.uk</div>
+    </div><!--  END "header"  //-->		
+		<div id="container" class="clearfix">
+			<div id="toppanel" class="clearfix">
+				<div id="navigation">
+					<ul>
+						<li><%= link_to 'Home', root_path, :class=>'main_category'%></li>
+						
+							<% if user_signed_in? %>
+					 			<li><%= link_to "Sign out", destroy_user_session_path, :class=>'main_category', :method=>:delete %></li>
+							<% else %>
+								<li><%= link_to "Sign up", new_user_registration_path,:class=>'main_category' %></li>
+								<li><%= link_to "Sign in", new_user_session_path,:class=>'main_category' %></li>
+							<% end %>
+					</ul>
+				</div>
+				<div id="search">
+                  <form method="get" action="###" id="searchform">
+                        <input type="text" name="s" value="Enter keywords..." onfocus="if (this.value == 'Enter keywords...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter keywords...';}" class="field" id="s">
+                        <input type="submit" value="Search" name="submit" class="submit">
+                    </form>
+            	</div>				
+			</div>
+			<div id="content_wrap">
+				<div id="inner_content">
+					<div class="entry">
+						<div class="entry_content">
+							<%= yield %>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="content">
-			<% flash.each do |key, value| %>
-    			<div class='<%=key%>' id='notice'>
-        			<%= value %>
-    			</div>
-			<% end %>
-
-			<%= yield %>
-
-		</div>
-		<div id="footer">
-			<%= link_to 'Terms and Condition', "#"%> | <%= link_to 'About Us', "#"%> | <%= link_to 'Contact Us', "#"%>
-		</div>
-	</div>
+		<div class="clearfix" id="footer">
+    		<div id="footer_left">&copy; Copyright 2009 by LondonCreative+</div>
+        	<div id="footer_right"><%= link_to(image_tag('/images/logo_footer.png'), root_path, :id=>"lclogo")%></div>
+    		<div id="footer_bottom"></div>
+    	</div>
 </body>
 </html>
