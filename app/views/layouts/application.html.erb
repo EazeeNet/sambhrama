@@ -19,14 +19,13 @@
 			<div id="toppanel" class="clearfix">
 				<div id="navigation">
 					<ul>
-						<li><%= link_to 'Home', root_path, :class=>'main_category'%></li>
-						
-							<% if user_signed_in? %>
-					 			<li><%= link_to "Sign out", destroy_user_session_path, :class=>'main_category', :method=>:delete %></li>
-							<% else %>
-								<li><%= link_to "Sign up", new_user_registration_path,:class=>'main_category' %></li>
-								<li><%= link_to "Sign in", new_user_session_path,:class=>'main_category' %></li>
-							<% end %>
+						<li class="<%= check_active("home", "index") %>"><%= link_to 'Home', root_path, :class=>'main_category'%></li>						
+						<% if user_signed_in? %>
+					 		<li><%= link_to "Sign out", destroy_user_session_path, :class=>'main_category', :method=>:delete %></li>
+						<% else %>
+							<li class="<%= check_active("registrations", "new") %>"><%= link_to "Sign up", new_user_registration_path,:class=>'main_category' %></li>
+							<li class="<%= check_active("sessions", "new") %>"><%= link_to "Sign in", new_user_session_path,:class=>'main_category' %></li>
+						<% end %>
 					</ul>
 				</div>
 				<div id="search">

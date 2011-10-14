@@ -2,6 +2,15 @@
 	#home_address, #business_address{
 		display: none;
 	}
+	.ui-accordion { width: 100%; }
+.ui-accordion .ui-accordion-header { cursor: pointer; position: relative; margin-top: 1px; zoom: 1; }
+.ui-accordion .ui-accordion-li-fix { display: inline; }
+.ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
+.ui-accordion .ui-accordion-header a { display: block; font-size: 1em; padding: .5em .5em .5em .7em; }
+.ui-accordion-icons .ui-accordion-header a { padding-left: 2.2em; }
+.ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+.ui-accordion .ui-accordion-content { padding: 0.1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
+.ui-accordion .ui-accordion-content-active { display: block; }
 </style>
 <script>
 	$(function(){
@@ -62,6 +71,26 @@ Welcome <%=current_user.email%>
     							<td>Address 2:</td>
     							<td><%= h.text_field :line2%></td>
     						</tr>
+    						<tr>
+    							<td>City:</td>
+    							<td><%= h.text_field :city%></td>
+    						</tr>
+    						<tr>
+    							<td>District:</td>
+    							<td><%= h.text_field :district%></td>
+    						</tr>
+    						<tr>
+    							<td>State:</td>
+    							<td><%= h.text_field :state%></td>
+    						</tr>
+    						<tr>
+    							<td>Pin code:</td>
+    							<td><%= h.text_field :pincode%></td>
+    						</tr>
+    						<tr>
+    							<td>Country:</td>
+    							<td><%= h.text_field :country%></td>
+    						</tr>
     						<tr>    							
     							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
     						</tr>
@@ -80,6 +109,26 @@ Welcome <%=current_user.email%>
     						<tr>
     							<td>Address 2:</td>
     							<td><%= b.text_field :line2%></td>
+    						</tr>
+    						<tr>
+    							<td>City:</td>
+    							<td><%= b.text_field :city%></td>
+    						</tr>
+    						<tr>
+    							<td>District:</td>
+    							<td><%= b.text_field :district%></td>
+    						</tr>
+    						<tr>
+    							<td>State:</td>
+    							<td><%= b.text_field :state%></td>
+    						</tr>
+    						<tr>
+    							<td>Pin code:</td>
+    							<td><%= b.text_field :pincode%></td>
+    						</tr>
+    						<tr>
+    							<td>Country:</td>
+    							<td><%= b.text_field :country%></td>
     						</tr>
     						<tr>    							
     							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
