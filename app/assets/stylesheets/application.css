@@ -3,39 +3,5 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_directory ./global 
 */
- /*body{
-  padding: 0px;
-  margin:0px auto;
-  width:1000px;
-  font: 14px Verdana,Helvetica,Arial,sans-serif;
- }
- #main{
- 	border: 1pt solid grey;
- }
- #header{
-  height:80px;
-  background-color: orange;
- }
- #content{
- 	min-height: 400px;
- 	padding-left:20px;
- }
- #footer{
-  height:50px;
-  background-color: red;
- }
- .alert{
- 	background-color:red;
- 	color:black;
-	width:300px;
- } 
- .notice{
-	background-color: #57E964;
-	color:black;
-	width:300px;
-  }
-#accordion{
-	width:600px;
-}*/
