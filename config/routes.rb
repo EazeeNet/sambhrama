@@ -11,6 +11,7 @@ Sambhrama::Application.routes.draw do
   get "static/kannada_culture"
   get "static/about_member"
   get "static/contact"
+  get "static/video_gallery"
   
   root :to=> "home#index"
   match '/:controller(/:action(/:id))'

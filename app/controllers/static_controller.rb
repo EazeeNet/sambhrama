@@ -10,5 +10,8 @@ class StaticController < ApplicationController
 
   def contact
   end
+  def video_gallery
+    
+  end
 
 end

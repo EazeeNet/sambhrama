@@ -1,0 +1,84 @@
+<%=javascript_include_tag 'videogallery/JQYouTubeSlidingGallery-obf'%>
+<script type="text/javascript">
+//################Plugin parameters wih description ############
+//                galleryWidth: 1000, - total gallery width
+//                galleryHeight: 437, - total gallery height
+//                previewWidth: 700, - preview area width (video)
+//                thumbsAreaWidth: 300, - thumbnails area width
+//                thumbImageWidth: 100, - thumbnails image width
+//                thumbImageHeight: 62, - thumbnails image height
+//                galleryBgColor: '222222',- gallery bg color
+//                thumbBgColor: '111111', - thumbnails bg color
+//                selectedThumbBgColor: '840000', - selected thumbnail color
+//                mouseOverThumbBgColor: '3e3e3e', - hover thumbnial color
+//                images/assetsPath: 'images/assets', - assests folder path
+//                autoPlayFirstVideo: false, - when "true" play first video automatically
+//                pauseOnSlideChange:true - when "true" plaing video on slide change
+
+            $(document).ready(function () {
+                $('#main').JQSlidingYouTubeGallery({autoPlayFirstVideo:false,previewWidth: 565,  galleryWidth: 880});
+				$('#sliding-gallery div:last').remove();
+            });
+        </script>
+<div id="content_wrap">
+            <div id="inner_content">
+                <div class="entry">
+                    <div class="entry_content">
+                    	 <div id="main">
+            <ul style="display: none;">
+                <li>
+                    <img src="bVqjx34RQpM"/>
+                    <img alt="2" src="/images/assets/thumbs/1.jpg"/>
+                    <p>Video title 1</p>
+                    <p><cite>Video description can be any formated  html (italic)</cite></p>
+                </li>
+				 <li>
+                    <img src="AJZ64EXdpgQ"/>
+                    <img alt="2" src="/images/assets/thumbs/3.jpg"/>
+                    <p>Video title</p>
+                    <p><u>Video description can be any formated  html</u> (underline)</p>
+                </li>
+                <li>
+                    <img src="06lLOl3GioA"/>
+                    <img alt="Second Video" src="/images/assets/thumbs/4.jpg"/>
+                    <p>Video title</p>
+                    <p><span style="color: red;">Description can be coloured</span></p>
+                </li>
+                <li>
+                    <img src="vGTvXFXOWrE"/>
+                    <img alt="2" src="/images/assets/thumbs/5.jpg"/>
+                    <p>Video title</p>
+                    <p>Description can contains a link <a href="http://flcomponents.net">FLComponents</a></p>
+                </li>
+                <li>
+                    <img src="S4CfWdoSOTk"/>
+                    <img alt="Second Video" src="/images/assets/thumbs/6.jpg"/>
+                    <p>Video title</p>
+                    <p>Description can be any HTML</p>
+                </li>
+                <li>
+                    <img src="RXqSedWSu2k"/>
+                    <img alt="2" src="/images/assets/thumbs/7.jpg"/>
+                    <p>Video title</p>
+                    <p>Description can be any HTML</p>
+                </li>
+                <li>
+                    <img src="6_z6dmE-YMQ"/>
+                    <img alt="Second Video" src="/images/assets/thumbs/9.jpg"/>
+                    <p>Video title</p>
+                    <p>Description can be any HTML</p>
+                </li>
+                <li>
+                    <img src="rUAwj3mcDCU"/>
+                    <img alt="2" src="/images/assets/thumbs/10.jpg"/>
+                    <p>Video title</p>
+                    <p>Description can be any HTML</p>
+                </li>
+      
+            </ul>
+        </div>
+                    </div><!--  END "entry_content"  //-->
+                </div><!--  END "entry"  //-->
+            </div><!--  END "inner_content"  //-->
+       
+        </div><!--  END "content_wrap"  //-->
