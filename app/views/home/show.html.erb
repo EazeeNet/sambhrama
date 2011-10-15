@@ -12,15 +12,23 @@
 .ui-accordion .ui-accordion-content { padding: 0.1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
 .ui-accordion .ui-accordion-content-active { display: block; }
 </style>
+<%=javascript_include_tag 'uncommon/jquery.blockUI'%>
 <script>
-	$(function(){
-		$('#home').click(function(){
+$(function(){
+  $("#accordion").accordion({
+      change: function(event, ui) {
+      $('.ui-accordion-content').css('height','');
+      $( ".selector" ).accordion( "option", "active", 2 ); 
+    }
+    }); 
+    
+  $('#home').click(function(){
 			$.blockUI({	 message: ($('#home_address')), css: { width: '400px', cursor: 'auto' } });
 		})
 		$('#business').click(function(){
 			$.blockUI({	 message: ($('#business_address')), css: { width: '400px', cursor: 'auto' } });
-		})
 	})
+});
 </script>
 Welcome <%=current_user.email%>
 <br/>

@@ -7,4 +7,11 @@
 //= require jquery
 //= require jquery-ui
 // require jquery_ujs
-//= require_tree .
+//= require_directory .
+$(function(){
+	if($('#notice').length>0){
+    	$('#notice').fadeOut(4000)
+  	}else{
+    	$('#notice').hide();
+  	}
+})
