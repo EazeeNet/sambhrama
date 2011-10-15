@@ -1,8 +1,13 @@
 <style>
 	#home_address, #business_address{
 		display: none;
+		background-color: '#CECECE';
 	}
-	.ui-accordion { width: 100%; }
+	td{
+		border-width:0px;
+	}
+	
+.ui-accordion { width: 100%; }
 .ui-accordion .ui-accordion-header { cursor: pointer; position: relative; margin-top: 1px; zoom: 1; }
 .ui-accordion .ui-accordion-li-fix { display: inline; }
 .ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
@@ -23,10 +28,10 @@ $(function(){
     }); 
     
   $('#home').click(function(){
-			$.blockUI({	 message: ($('#home_address')), css: { width: '400px', cursor: 'auto' } });
+			$.blockUI({	 message: ($('#home_address')), css: { width: 'auto', cursor: 'auto', background: '#CECECE' } });
 		})
 		$('#business').click(function(){
-			$.blockUI({	 message: ($('#business_address')), css: { width: '400px', cursor: 'auto' } });
+			$.blockUI({	 message: ($('#business_address')), css: { width: 'auto', cursor: 'auto', background: '#CECECE' } });
 	})
 });
 </script>
@@ -69,6 +74,7 @@ Welcome <%=current_user.email%>
     			</tr>
     			<tr id="home_address" >
     				<td>
+    					<div style="background-color: grey; font-weight: bold"><span style="float:right"><a href="javascript:void(0)" onclick="$.unblockUI()" style="color:#000000">X&nbsp;</a></span><span style="color:red">Home Address</span></div>
     					<%= fields_for :home_address do |h| %>
     					<table>
     						<tr>
@@ -99,15 +105,13 @@ Welcome <%=current_user.email%>
     							<td>Country:</td>
     							<td><%= h.text_field :country%></td>
     						</tr>
-    						<tr>    							
-    							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
-    						</tr>
     					</table>
     					<%end%>
     				</td>
     			</tr>
-    			<tr id="business_address" >
+    			<tr id="business_address" >    				
     				<td>
+    					<div style="background-color: grey; font-weight: bold"><span style="float:right"><a href="javascript:void(0)" onclick="$.unblockUI()" style="color:#000000">X&nbsp;</a></span><span style="color:red">Business Address</span></div>
     					<%= fields_for :business_address do |b| %>
     					<table>
     						<tr>
