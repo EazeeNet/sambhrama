@@ -7,7 +7,7 @@
 //= require jquery
 //= require jquery-ui
 // require jquery_ujs
-//= require_directory .
+//= require_directory ./global
 $(function(){
 	if($('#notice').length>0){
     	$('#notice').fadeOut(4000)
