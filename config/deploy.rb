@@ -5,7 +5,7 @@ require 'bundler/capistrano'
 
 
 set :application, "ticketee"
-set :repository,  "git://github.com/vinayak/ticketee.git"
+set :repository,  "git://github.com/EazeeNet/sambhrama.git"
 
 set :scm, :git
 
