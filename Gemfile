@@ -19,6 +19,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'rake', '0.9.2.2'
+
 gem 'devise', '~> 1.4.3'
 gem 'email_spec'
 # Use unicorn as the web server
