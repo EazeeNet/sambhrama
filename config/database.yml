@@ -1,0 +1,21 @@
+dblogin: &dblogin
+  adapter: mysql
+  database: sambharama
+  username: root
+  password: tanishqa
+  encoding: utf8
+
+development: 
+  <<: *dblogin
+  database: sambharama
+
+production:
+  <<: *dblogin
+  database: sambharama_prod
+
+test: &test
+  <<: *dblogin
+  database: sambharama_test
+
+cucumber:
+  <<: *test

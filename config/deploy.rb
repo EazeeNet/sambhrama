@@ -41,7 +41,7 @@ role :db,  "ec2-67-202-44-198.compute-1.amazonaws.com"
  end
  
  task :symlink_database_yml do
-  run "rm #{release_path}/config/database.yml"
+ # run "rm #{release_path}/config/database.yml"
   run "ln -sfn #{shared_path}/config/database.yml  #{release_path}/config/database.yml"
  end
 
