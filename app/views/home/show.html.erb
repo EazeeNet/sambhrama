@@ -1,5 +1,5 @@
 <style>
-	#home_address, #business_address{
+	#home_address, #business_address, #communication_address{
 		display: none;
 		background-color: '#CECECE';
 	}
@@ -32,6 +32,9 @@ $(function(){
 		})
 		$('#business').click(function(){
 			$.blockUI({	 message: ($('#business_address')), css: { width: 'auto', cursor: 'auto', background: '#CECECE' } });
+	})
+	$('#communication').click(function(){
+			$.blockUI({	 message: ($('#communication_address')), css: { width: 'auto', cursor: 'auto', background: '#CECECE' } });
 	})
 });
 </script>
@@ -142,13 +145,50 @@ Welcome <%=current_user.email%>
     							<td>Country:</td>
     							<td><%= b.text_field :country%></td>
     						</tr>
-    						<tr>    							
-    							<td><input type="button" onclick="$.unblockUI()" value="Close"/></td>
+    					</table>
+    					<%end%>
+    				</td>
+    			</tr>
+    			
+    			<tr id="communication_address" >    				
+    				<td>
+    					<div style="background-color: grey; font-weight: bold"><span style="float:right"><a href="javascript:void(0)" onclick="$.unblockUI()" style="color:#000000">X&nbsp;</a></span><span style="color:red">Communication Address</span></div>
+    					<%= fields_for :communication_address do |c| %>
+    					<table>
+    						<tr>
+    							<td>Address 1:</td>
+    							<td><%= c.text_field :line1%></td>
+    						</tr>
+    						<tr>
+    							<td>Address 2:</td>
+    							<td><%= c.text_field :line2%></td>
+    						</tr>
+    						<tr>
+    							<td>City:</td>
+    							<td><%= c.text_field :city%></td>
+    						</tr>
+    						<tr>
+    							<td>District:</td>
+    							<td><%= c.text_field :district%></td>
+    						</tr>
+    						<tr>
+    							<td>State:</td>
+    							<td><%= c.text_field :state%></td>
+    						</tr>
+    						<tr>
+    							<td>Pin code:</td>
+    							<td><%= c.text_field :pincode%></td>
+    						</tr>
+    						<tr>
+    							<td>Country:</td>
+    							<td><%= c.text_field :country%></td>
     						</tr>
     					</table>
     					<%end%>
     				</td>
     			</tr>
+    			
+    			
     			<tr>
     				<td><%= f.submit %></td>
     			</tr>
@@ -157,7 +197,9 @@ Welcome <%=current_user.email%>
     	
     </div>
     <h3><a href="#">Psychographic Information</a></h3>
-    <div>Second content</div>
+    <div>
+    Relation: <%=select_tag 'relation', options_for_select(@relation.types.map{|t| t.name})%>
+    </div>
     <h3><a href="#">Become a Member</a></h3>
     <div>Third content</div>
 </div>
