@@ -1,4 +1,6 @@
 Sambhrama::Application.routes.draw do
+  get "news/fetch"
+  
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -6,6 +8,7 @@ Sambhrama::Application.routes.draw do
  # get "users/index"
   match 'member_home', :to => 'home#show'
   devise_for :users
+ 
   
   get "static/about_us"
   get "static/kannada_culture"
@@ -13,6 +16,11 @@ Sambhrama::Application.routes.draw do
   get "static/contact"
   get "static/video_gallery"
   
-  root :to=> "home#index"
+
+  
+root :to=> "home#index"
+  
   match '/:controller(/:action(/:id))'
+  
+
 end

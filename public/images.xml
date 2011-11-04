@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<images>
+	<photo image = "images/ss1.jpg" colorboxImage="images/21.jpg" url = "#" target="_blank" colorboxInfo="Item 01" colorboxClass="image"></photo>
+	
+	<photo image = "images/ss2.jpg" colorboxImage="images/21.jpg" url = "#" target="_blank" colorboxInfo="Item 01" colorboxClass="image"></photo>
+	
+	<photo image = "images/ss3.jpg" colorboxImage="images/21.jpg" url = "#" target="_blank" colorboxInfo="Item 01" colorboxClass="image"></photo>
+	
+	<photo image = "images/ss4.jpg" colorboxImage="images/21.jpg" url = "#" target="_blank" colorboxInfo="Item 01" colorboxClass="image"></photo>
+	
+	
+	
+</images>

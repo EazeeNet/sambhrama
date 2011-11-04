@@ -1,0 +1,66 @@
+
+
+<settings>
+
+  <General_Properties>
+    <assets value="images.xml"/>
+    <showAbout value="true"/>
+    <componentWidth value="840"/>
+    <componentHeight value="420"/>
+    <moveX value="0"/>
+    <moveY value="-60"/>
+    <backgroundColor value=""/>
+    <backgroundAlpha value="0"/>
+    <cameraX value="0"/>
+    <cameraY value="0"/>
+    <cameraZ value="-347"/>
+    <cameraRotationX value="0"/>
+    <cameraRotationY value="0"/>
+    <cameraRotationZ value="0"/>
+    <cameraFocus value="320"/>
+    <cameraZoom value="1"/>
+    <cameraUpDown value="0"/>
+    <cameraLeftRight value="0"/>
+    <useColorbox value="true"/>
+  </General_Properties>
+
+ 
+ <CoverFlow_Properties>
+    <startIndex value="5"/>
+    <planeAngle value="70"/>
+    <planeSeparation value="120"/>
+    <planeOffset value="10"/>
+    <planeOffsetZ value="-170"/>
+    <tweenTime value="2"/>
+    <functione value="Circ"/>
+    <method value="easeOut"/>
+  </CoverFlow_Properties>
+  
+  <Reflection_Properties>
+    <alpha value="41"/>
+    <ratio value="209"/>
+    <distance value="0"/>
+    <dropOff value="0"/>
+  </Reflection_Properties>
+  
+  <Scroll_Bar>
+    <type_Bar value="Bar.xml"/>
+    <width value="600"/>
+    <positionY value="370"/>
+  </Scroll_Bar>
+  
+  <Play_Settings>
+    <showPlay value="false"/>
+    <autoPlay value="true"/>
+    <slideShowTime value="2.4"/>
+    <leftRightPlay value="right"/>
+    <ifLastPicture value="back"/>
+    <hPosition value="center"/>
+    <vPosition value="top"/>
+    <hPadding value="0"/>
+    <vPadding value="8"/>
+    <playBtn value="/images/assets/buttons/play2.png"/>
+    <pauseBtn value="/images/assets/buttons/pause2.png"/>
+  </Play_Settings>
+
+</settings>

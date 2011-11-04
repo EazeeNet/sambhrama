@@ -11,17 +11,13 @@ gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails', "  ~> 3.1.0"
-gem 'therubyracer'
 group :assets do
- 
+  gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
 
 gem 'jquery-rails'
-
-gem 'rake', '0.9.2.2'
 
 gem 'devise', '~> 1.4.3'
 gem 'email_spec'

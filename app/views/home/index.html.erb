@@ -1,108 +1,230 @@
-<style>
-.nivo-caption{
-	display:none !important;
-}
-</style>
-<%=javascript_include_tag 'home/jquery.nivo.slider', 'home/jquery.rotate', 'home/jquery.vticker.1.4'%>
-<%=stylesheet_link_tag 'home/nivo-slider'%>
-<script>
-$(document).ready(function (){
-		$('.myclass').vTicker({
+<%= javascript_include_tag "swfobject" %>	
+<a href="http://apycom.com/"></a>
+
+<%= javascript_include_tag "jquery.vticker.1.4" %>
+<%= javascript_include_tag "jquery.innerfade" %>
+
+
+<%= javascript_include_tag "menu" %>
+<%= javascript_include_tag "scripts" %>
+<%= javascript_include_tag "jquery.osmplayer.compressed" %>
+<%= javascript_include_tag "jquery.media.template.default.compressed" %>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#myslider').vTicker({
 		   speed: 2500,
-		   pause: 10000,
-		   showItems: 1,
+		   pause: 3000,
+		   showItems : 2,
 		   animation: 'slide',
 		   mousePause: true,
-		   height: 145,
+		   height: 204,
 		   direction: 'up'
+		   
+		});
+		 $('#test_slider').innerfade({
+						speed: 4000,
+						timeout: 5000,
+						type: 'sequence',
+						containerheight: '220px'
+					});
+		  
+		   
+		   $('#blog_slider').vTicker({
+		   speed: 2500,
+		   pause: 3000,
+		   showItems : 2,
+		   animation: 'slide',
+		   mousePause: true,
+		   height: 172,
+		   direction: 'down'
+		   
 		});
 		
-		$('#nivo-slider').nivoSlider({
-				effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
-				animSpeed:500,
-				pauseTime:5000,
-				controlNav:true //1,2,3...
-			});
-			$(document).ready(function(){
-$("a[rel^='prettyPhoto']").prettyPhoto();
-}); 
+		
 });
+
 </script>
-<div id="featured_home" class="clearfix">
-        	<div id="nivo-slider">
-			<a href="#" title="Get the freedom to Earn what you have seen in your Dreams. "><img src="images/slide.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="One easy payment. One account to manage."><img src="images/slide1.jpg" width="960" height="300" alt="" /></a>
-			<a href="about.php" title="We offer MLM solutions."><img src="images/slide2.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="We look at the bigger picture with you."><img src="images/slide3.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="Get the freedom to Earn what you have seen in your Dreams. "><img src="images/slide.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="One easy payment. One account to manage."><img src="images/slide1.jpg" width="960" height="300" alt="" /></a>
-			<a href="about.php" title="We offer MLM solutions."><img src="images/slide2.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="We look at the bigger picture with you."><img src="images/slide3.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="Get the freedom to Earn what you have seen in your Dreams. "><img src="images/slide.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="One easy payment. One account to manage."><img src="images/slide1.jpg" width="960" height="300" alt="" /></a>
-			<a href="about.php" title="We offer MLM solutions."><img src="images/slide2.jpg" width="960" height="300" alt="" /></a>
-			<a href="#" title="We look at the bigger picture with you."><img src="images/slide3.jpg" width="960" height="300" alt="" /></a>
+
+
+<!--Flash Coverflow-->
+
+<script type="text/javascript">
+
+var flashvars = {};
+var params = {};
+params.scale = "noscale";
+params.salign = "tl";
+params.wmode = "transparent";
+var attributes = {};
+swfobject.embedSWF("swf/CoverFlowFX.swf", "DivCoverFlowFX", "800", "400", "9.0.0", false, flashvars, params, attributes);			
+
+</script>
+
+
+<div class="flash-coverflow">
+	
+	<div id="DivCoverFlowFX">
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
 		</div>
-      		<!--  END "bigimg"  //-->
-       
-</div><!--  END "featured_home"  //-->
-<div id="message_buttons">
-			<div class="button1"><%= link_to 'Video Gallery', static_video_gallery_path%><!--<a href="#">Video Gallery</a>--></div>
-            <div class="button2"><a href="#">News And Events</a></div>
-        </div><!--  END "message_buttons"  //-->
-        <div id="content_wrap">
-            <div id="inner_content">
-                <div class="entry">
-                  <object width="550" height="310"><param name="movie" value="http://www.youtube.com/v/cgwxXKsZhAo?version=3&amp;hl=en_GB"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cgwxXKsZhAo?version=3&amp;hl=en_GB" type="application/x-shockwave-flash" width="550" height="310" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-                </div><!--  END "entry"  //-->
-                <div class="entry">
-                 	<div class="widget">
-                	<h3 class="widget_title" style="width:539px;">Social Networks</h3>
-                    <div class="widget_content" style="padding-bottom:2px;">
-					<div style="height: 90px; background: #666666;width: 516px;margin-top: 6px;">
-					<div id="navigation">
-					<li style="list-style:none"> <a href="#">
-					<img src="images/facebook-icon.png" height="65px" width="65px" title="Facebook"/></a>
-					<a href="#"><img src="images/twitter-icon.png" height="58px" width="65px" title="Twitter"/></a>
-					<a href="#"><img src="images/google-plus-icon.png" height="58px" width="65px" title="Google+" /></a>
-					<a href="#"><img src="images/orkut-icon.png" height="65px" width="65px" title="Orkut"/></a>
-					<a href="#"><img src="images/linkedin-icon.png" height="65px" width="65px" title="Linke In" /></a>
-					</li>
-					
-					</div>
-					
-					</div>
-					</div>
-					</div>
-					
-                </div><!--  END "entry"  //-->
-            </div><!--  END "inner_content"  //-->
-            <div id="sidebar_home">
-            	<div class="widget" style="height:215px">
-                	<h3 class="widget_title">Latest News</h3>
-                    <div class="widget_content" style="height:125px; padding-left:30px; cursor:pointer;">
-                    <div class='myclass'>
-					   <ul>
-						  <li>
-						  <div style="font-size:20px; font-weight:bold"><u>News Heading 1</u></div>
-						  <div>
-						  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..
-						  </div></li>
-						  
-						  <li><div style="font-size:20px; font-weight:bold"><u>News Heading 2</u></div>
-						  <div>
-						  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..  Here is some content for news..
-						  </div></li>
-						 
-					   </ul>
-					</div>
-                    </div><!--  END "widget_content"  //-->
-                </div><!--  END "widget"  //-->
-                <div class="widget">
-                	<h3 class="widget_title">Upcoming Events</h3>
-                    <div class="widget_content">
-                    	<img src="images/screen_widget.jpg" alt="Screenshot" style="float:left; margin:0 10px 2px 0;" /><p>This is a text widget. You can have them as many as you like.<br /><br />This theme comes with fully working contact form, awesome slider for your featured images, nasty spinning slider buttons (never saw them anywhere else, so you can call it unique), 2 message buttons under the slider, PrettyPhoto plugin (better clone of Lightbox). <br /><br /> You will also have user-friendly dropdown navigation with infinite dropdown levels where you can style every even list item via Jquery, so no more hassle, it's automatic, you can just change the colors etc. in stylesheet and you are ready to go!</p>
-                    </div><!--  END "widget_content"  //-->
-                </div><!--  END "widget"  //-->
-            </div><!--  END "sidebar_home"  //-->
-        </div><!--  END "content_wrap"  //-->
+	</div>
+
+<!-- Content Wrapper -->
+	<div class="content-wrapper">
+	
+	<div class="content-container">
+	
+	<div class="news-container-border">
+	
+	<!-- News Scroller -->
+	<div class="news-wrapper" >
+	<h1>Latest News & Events </h1>
+	<div id="myslider">
+	<ul>
+	<% @news.each do |test| %>
+	<% if test.message_type==1 %>
+	<li>
+	<div class="news-item-container">
+	
+		
+		<div class="news-item-description">
+		<a href=""><h2><%=  test.message_text_short %></h2></a>
+		<p>
+		<%=  test.message_text_long %>
+		</p>
+		
+		</div>
+		
+	</div>
+	</li>
+	<%  elsif  test.message_type==2 %>
+	
+	                   <li>
+                                <div class="date-box">
+                                    <a href="/Blog/BlogB.aspx?Id=177&amp;AuthorId=2">
+                                    <em>
+                                    	<%= test.event_date.strftime( "%B" ) %>
+                                     </em><span>
+                                        <%= test.event_date.strftime( "%d" ) %>
+                                    </span>
+                                    </a>
+                                </div>
+                                <div class="blog-text">
+                                    <h4><a href="#"><%= test.message_text_short %></a></h4>
+                                    <span class="posted">Place:</span>
+                                    <h3>
+                                       <%= test.message_text_long %>
+                                    </h3>
+                                </div>
+                          </li>
+                          <% end %>
+                        
+                            <% end %>
+	
+	</ul>
+	</div>
+	
+	</div>	
+	
+	<!-- Testimonials -->
+	<div class="news-wrapper testimonal">
+	
+	<h1>Members Speak</h1>	
+
+	<ul id="test_slider">
+	<li>
+	<img src="images/member-spk.jpg" class="memb-spk-img">
+	
+	<div class="membr-spk-desk">
+	<h2>Members Name</h2>
+	<em>Owner: PaperCity Magazine</em>
+	</div>
+	<h3>"Sample testimonial heading here.."</h3>
+	<p>Ive engaged TOS to plan, design and develop PaperCitys website and other digital initiatives. This is something I have...<a href="">{Read more}</a></p>
+	</li>
+	
+	
+	<li>
+	<img src="images/member-spk.jpg" class="memb-spk-img">
+	
+	<div class="membr-spk-desk">
+	<h2>John Bravo</h2>
+	<em>Owner: PaperCity Magazine</em>
+	</div>
+	<h3>"Helloooo"</h3>
+	<p>Ive engaged TOS to plan, design and develop PaperCitys website and other digital initiatives. This is something I have...<a href="">{Read more}</a></p>
+	</li>
+	</ul>
+
+	</div>	
+	
+	<!-- Events -->
+	<div class="news-wrapper events">
+	<h1>Daily</h1>	
+	<div id="blog_slider">
+	<ul class="blog">  
+              	<% @news.each do |test| %>
+                <% if test.message_type==3 %>   
+                <li>
+             
+                         
+                                   
+                                <div class="blog-text">
+                                         <h4><a href="#">Thoughts</a></h4>
+                                
+                                    <h3>
+                                        <%= test.message_text_long %>
+                                    <h3>
+                                </div>
+                          </li>
+                <% elsif test.message_type==4 %>
+                <li>
+                 
+                                <div class="blog-text">
+                                   
+                                   <h4><a href="#">Jokes</a></h4>
+                                    <h3>
+                                        <%= test.message_text_long %>
+                                    <h3>
+                                </div>
+                          </li>
+                 <% elsif test.message_type==5 %>
+                  <li>
+                 
+                                <div class="blog-text">
+                                    <h4>Question <% test.id %> </h4>
+                                  
+                                    <h3>
+                                        <%= test.message_text_long %>
+                                    <h3>
+                                </div>
+                          </li>
+                  <% elsif test.message_type==6 %>
+                  <li>
+                 
+                                <div class="blog-text">
+                                    <h4>Question <% test.id %> </h4>
+                                  
+                                    <h3>
+                                        <%= test.message_text_long %>
+                                    <h3>
+                                </div>
+                          </li>
+                
+                    
+                <% end %>
+              <% end %>
+         </ul>	
+				</div>
+				</div>	
+	</div>
+	</div>
+    </div>
+	
+	
+	

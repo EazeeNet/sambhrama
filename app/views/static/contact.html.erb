@@ -1,2 +1,28 @@
-<h1>Static#contact</h1>
-<p>Find me in app/views/static/contact.html.erb</p>
+
+
+<h2>Contact</h2>
+<% form_for :user do |form| %>
+
+
+<%= form.label :name %>
+<%= form.text_field :name %>
+
+<%= form.label :address %>
+<%= form.text_field :address %>
+
+<%= form.label :phoneno %>
+<%= form.text_field :phoneno %>
+
+<%= form.label :email %>
+<%= form.text_field :email %>
+
+<%= form.label :comment %>
+<%= form.text_field :comment %>
+
+
+<%= submit_tag "Login!", :class => "submit" %>
+
+
+
+
+<% end %>

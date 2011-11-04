@@ -1,0 +1,2 @@
+class ThoughtController < ApplicationController
+end

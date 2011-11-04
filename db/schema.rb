@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031085954) do
+ActiveRecord::Schema.define(:version => 20111103071511) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(:version => 20111031085954) do
     t.integer  "business_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "communication_id"
   end
 
   create_table "admin_users", :force => true do |t|
@@ -66,6 +65,16 @@ ActiveRecord::Schema.define(:version => 20111031085954) do
     t.integer "parent_id"
   end
 
+  create_table "contact_us", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "phoneno"
+    t.string   "email"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "demographics", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -80,9 +89,30 @@ ActiveRecord::Schema.define(:version => 20111031085954) do
     t.datetime "updated_at"
   end
 
+  create_table "messages", :force => true do |t|
+    t.integer  "message_type"
+    t.string   "message_text_short"
+    t.string   "message_text_long"
+    t.date     "event_date"
+    t.date     "exp_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "news_tickers", :force => true do |t|
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thought_of_days", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "thoughtofdays", :force => true do |t|
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
