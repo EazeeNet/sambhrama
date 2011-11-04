@@ -4,15 +4,15 @@ require 'rvm/capistrano'
 require 'bundler/capistrano'
 
 
-set :application, "ticketee"
+set :application, "sambhrama"
 set :repository,  "git://github.com/EazeeNet/sambhrama.git"
 
 set :scm, :git
 
-set :user, "ticketee"
-#set :rvm_type, :user
-set :rvm_ruby_string, '1.9.2@global'
-set :deploy_to, "/home/ticketee/apps/#{application}"
+set :user, "sambhrama"
+set :rvm_type, :user
+set :rvm_ruby_string, '1.9.2'
+set :deploy_to, "/home/sambhrama/apps/"
 set :use_sudo, false
 set :keep_releases, 5
 
@@ -23,10 +23,10 @@ set :keep_releases, 5
 #}
 
 
-role :web, "ec2-67-202-44-198.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
-role :app, "ec2-67-202-44-198.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
-role :db,  "ec2-67-202-44-198.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
-role :db,  "ec2-67-202-44-198.compute-1.amazonaws.com"
+role :web, "178.18.124.18"                          # Your HTTP server, Apache/etc
+role :app, "178.18.124.18"                          # This may be the same as your `Web` server
+role :db,  "178.18.124.18", :primary => true # This is where Rails migrations will run
+role :db,  "178.18.124.18"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
