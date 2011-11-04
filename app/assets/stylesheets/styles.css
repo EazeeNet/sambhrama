@@ -382,7 +382,7 @@ margin-top:15px;margin-bottom:15px;}
 .link-hear { background-position: -466px -24px !important;   margin: 3px auto 0;   width: 129px;}
 .link-claim {  background-position: -658px -18px !important;   width: 121px;}
 
-.product-holder ul li:hover div, .product-holder ul li.hover div {  background: url(""/images/bg-outer-glow.png") no-repeat scroll 0 0 transparent;
+.product-holder ul li:hover div, .product-holder ul li.hover div {  background: url("/images/bg-outer-glow.png") no-repeat scroll 0 0 transparent;
     margin: 9px -82px 0;   padding: 36px 100px;}
 	
 /* Media Gallery */
