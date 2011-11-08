@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user! , :except=>['index','video_gallery']
+  before_filter  :authenticate_user!, :except=>['index','video_gallery','create_update']
   def index
   @news = Message.find(:all ,:conditions => [' message_type in (1,2,3,4,5,6)' ])
   

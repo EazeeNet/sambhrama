@@ -1,14 +1,13 @@
-<%= javascript_include_tag "swfobject" %>	
-<a href="http://apycom.com/"></a>
-
-<%= javascript_include_tag "jquery.vticker.1.4" %>
-<%= javascript_include_tag "jquery.innerfade" %>
 
 
-<%= javascript_include_tag "menu" %>
-<%= javascript_include_tag "scripts" %>
-<%= javascript_include_tag "jquery.osmplayer.compressed" %>
-<%= javascript_include_tag "jquery.media.template.default.compressed" %>
+<%= javascript_include_tag "index/swfobject" %>	
+
+<%= javascript_include_tag "index/jquery.vticker.1.4" %>
+<%= javascript_include_tag "index/jquery.innerfade" %>
+
+
+
+
 
 
 
@@ -60,7 +59,7 @@ params.scale = "noscale";
 params.salign = "tl";
 params.wmode = "transparent";
 var attributes = {};
-swfobject.embedSWF("swf/CoverFlowFX.swf", "DivCoverFlowFX", "800", "400", "9.0.0", false, flashvars, params, attributes);			
+swfobject.embedSWF("/swf/CoverFlowFX.swf", "DivCoverFlowFX", "800", "400", "9.0.0", false, flashvars, params, attributes);			
 
 </script>
 

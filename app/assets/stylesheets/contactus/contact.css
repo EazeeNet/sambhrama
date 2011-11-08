@@ -1,0 +1,141 @@
+
+#wrapper{
+width:980px;height:auto;margin:0 auto;
+}
+#wrapper .container{float:left;width:980px;height:auto;background:url("/images/content-bg.png");padding:0 5px;
+ -webkit-box-shadow: 0px 4px 20px #010101; /* Saf3-4 */
+     -moz-box-shadow: 0px 4px 20px #010101; /* FF3.5 - 3.6 */
+          box-shadow: 0px 4px 20px #010101; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+
+}
+
+
+
+.container .header{width:100%;height:80px;background:#fff;position:relative}
+	
+	/*
+	===========================
+	Contact page
+	===========================
+	*/
+	.isidepage-bg{    background: url("/images/contact-banner.jpg") no-repeat scroll right top #FFFFFF;
+    border: 2px solid #A05859;
+    border-radius: 4px 4px 4px 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+    float: left;
+    height: 150px;
+    width: 976px;
+	 -webkit-box-shadow: 0px 0px 4px #E6E6E6; /* Saf3-4 */
+     -moz-box-shadow: 0px 0px 4px #E6E6E6; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 4px #E6E6E6; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	
+	}
+	.isidepage-bg h2{ color: #46474B;  font-family: arial;  font-size: 18px;  letter-spacing: 1px;  margin-left: 18px;  margin-top: 18px;}
+	.isidepage-bg p{ color: #46474B; font-family: georgia;  font-size: 12px;  line-height: 24px;  margin-left: 18px;   margin-top: 18px;  width: 600px;}
+	.contact-left{float:left;width:464px;height:auto;margin-top:15px;
+	 padding-left: 10px;color: #fff;
+	}
+	.contact-left h2{color: #fff;   font-family: arial;   font-size: 18px; letter-spacing: 1px; color: #fff; }
+	.contact-left .c1 {  color: #fff; clear: both;  display: block;   float: left;   margin-left: 5px;   margin-top: 10px;   padding-bottom: 14px;   width: 425px;}
+	
+	.contact-left .c1 strong{background:no-repeat scroll 2px 2px transparent;  color: #fff;  display: block;  float: left;  font-size: 14px;  font-weight: bold;  padding-left: 25px;height: 18px;}
+	.contact-left .c1 #addrbg{background: url("/images/ICON_location.gif") no-repeat;}
+	 
+	 .contact-left .c1 span{
+	display: block;
+    float: right;
+    width: 310px;
+	 color: #fff;
+    font-family: georgia;
+    font-size: 12px;
+	line-height: 18px;
+	}
+	.contact-left .c1 span b{float: left; width: 148px;font-size:11px;color: #fff}
+	#mailbg {
+    background-image: url("/images/ICON_mail.gif");
+}
+#phonebg {
+    background-image: url("/images/ICON_phone.gif");
+	}
+	.contact-form{border-left: 1px solid #E3E3E3;
+    float: right;
+    height: auto;
+    padding-left: 105px;
+    width: 370px;
+	margin-bottom:10px;
+	}
+	
+	label {
+      color: #fff;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: 6px;
+    width: 320px;
+	}
+	.error {
+    background-image: url("/images/bg_txtinput_error.gif");
+	}
+	.txtinput {
+    background-color: transparent;
+    background-image: url("/images/bg_txtinput.gif");
+    border: medium none;
+    color: #000000;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+    outline: medium none;
+    padding: 1px 5px 3px;
+    width: 308px;
+	}
+	
+	.txtareaerror {
+    background-color: transparent;
+    background-image: url("/images/bg_txtarea_error.gif");
+    border: medium none;
+    color: #603913;
+    display: block;
+    float: left;
+    font-family: "Verdana","Arial","sans-serif";
+    font-size: 17px;
+    height: 192px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    outline: medium none;
+    padding: 4px 5px;
+    resize: none;
+    width: 308px;
+	}
+	.txtareaerror:active, .txtareaerror:focus {
+    background-image: url("/images/bg_txtarea_active.gif");
+    color: black;
+	}
+	.submit{ border: 2px none;
+    cursor: pointer;
+    float: right;
+    margin-right: 50px;}
+	.map-img{  border: 1px solid #60605F;
+    float: left;
+    margin-right: 10px;
+    padding: 2px;}
+	.map-img:hover{
+	  border: 2px solid #B11E1D;
+	}
+	.submitbutt:hover{background:#E08845}
+	
+	/* Contact footer */
+
+	.footer{border: 1px solid #A05859;   border-radius: 4px 4px 4px 4px;   float: left;   margin-bottom: 10px;   margin-top: 10px;   padding: 10px;   width: 958px;}
+	.copy-right-text{float: left;  margin-top: 2px;  width: auto;}
+	.copy-right-text p{ color: #46474B;  font-family:"Lucida Grande";   font-size: 12px;text-indent:5px;}
+	.footer-links{  float: left;  margin-left: 30px;  width: 184px;}
+	.footer-links a{ border-right: 1px solid #E8E8E8;  color: #46474B;  font-family: "Lucida Grande";  font-size: 12px;  padding: 0 10px;  text-decoration: none;}
+	.footer-links a:hover{text-decoration:underline}
+	.developed-by{float: right;  margin-top: 2px;  width: auto;}
+	.developed-by span{color: #46474B;  font-family: "Lucida Grande";  font-size: 12px;}
+	.developed-by a{ background: url("/images/crosse-icon.jpg") no-repeat scroll 0 0 transparent;  float: right;  font-size: 0;   height: 15px;   margin-left: 6px;  width: 15px;}

@@ -10,22 +10,18 @@ class StaticController < ApplicationController
 
 def contact
 
-@title = "Register"
+@contact_us = ContactUs.new(params[:contact_us])
+@contact_us.save
 
-if request.post? and params[:user]
-@contact_us = ContactUs.new(params[:user])
 
-if @contact_us.save
 
-redirect_to :action => "index"
+
+
 end
-end
- 
-
-  end
   
-  def video_gallery   
 
-  end
+def video_gallery   
+
+end
 
 end

@@ -26,7 +26,7 @@
 
  
  <CoverFlow_Properties>
-    <startIndex value="5"/>
+    <startIndex value="1"/>
     <planeAngle value="70"/>
     <planeSeparation value="120"/>
     <planeOffset value="10"/>

@@ -1,0 +1,32 @@
+
+div#media-centre-holder {
+    display: block;
+    height: 400px;
+    left: 50%;
+    margin: 0 0 0 -497px;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    width: 993px;
+    z-index: 50;
+	}
+	div#media-centre-holder div#media-centre {
+    background: url("/images/media-centre-bg.png") no-repeat scroll 0 0 #000000;
+    display: block;
+    height: 400px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 993px;
+	}
+	.videos-list-title{background: none repeat scroll 0 0 #000000;
+    border: 1px solid #2D2D2D;
+  border-bottom:0 none;
+    font-family: trebuchet MS;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    position: absolute;
+    right: 120px;
+    top: 0px;
+    width: auto;}

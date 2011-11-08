@@ -1,33 +1,30 @@
+<%= stylesheet_link_tag "videogallery/videogallery" %>
+<%= stylesheet_link_tag "videogallery/jquery-ui-1.8rc1.custom" %>
+<%= stylesheet_link_tag "videogallery/osmplayer_default" %>
 
-<%= stylesheet_link_tag "jquery-ui-1.8rc1.custom" %>
-<%= stylesheet_link_tag "osmplayer_default" %>
 
-<%= javascript_include_tag "scripts" %>
-<%= javascript_include_tag "jquery.osmplayer.compressed" %>
-<%= javascript_include_tag "jquery.media.template.default.compressed" %>
+<%= javascript_include_tag "videogallery/jquery.osmplayer.compressed" %>
+<%= javascript_include_tag "videogallery/jquery.media.template.default.compressed" %>
   
 
-<script type="text/javascript">
+ <script type="text/javascript">
       $(document).ready(function() {
         $("#mediaplayer").mediaplayer({
-          playlist: "../playlist.xml"
+          playlist: "/playlist.xml"
         });
       });
-    </script>
+ </script>
 
-
-
-<div id="media-centre-holder"><div id="media-centre">
+<div id="media-centre-holder" style="height: 419px; display: block; "><div id="media-centre" style="top: 0px; ">
 			
 			    <div id="mediaplayerloading" style="width:700px;height:400px;">
-      <img src="../images/templates/default/busy.gif" />
+      <img src="/images/templates/default/busy.gif">
     </div>
 	
-    <div id="mediaplayer" class="mediashowplaylist mediashowtitle mediaplayerdialog ui-dialog ui-widget ui-widget-content ui-corner-all" style=" height: 382px;
-    margin-left: 0;  overflow: visible;   position: relative;  width: 972px;left:10px;">
+    <div id="mediaplayer" class="mediashowplaylist mediashowtitle mediaplayerdialog ui-dialog ui-widget ui-widget-content ui-corner-all" style="height: 382px; width: 972px; left: 10px; position: relative; margin-left: 0px; overflow-x: visible; overflow-y: visible; ">
 	  
-	  <div id="mediaplayer" class="ui-helper-clearfix">
-        <div id="mediamenu" class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
+	  <div id="mediaplayer" class="ui-helper-clearfix" style="">
+        <div id="mediamenu" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
           <div id="mediamenuclose">
             <span class="ui-icon ui-icon-circle-close"></span>
           </div>
@@ -36,31 +33,31 @@
             <li class="ui-state-default ui-corner-top"><a href="#mediaelink">link</a></li>
             <li class="ui-state-default ui-corner-top"><a href="#mediainfo">info</a></li>
           </ul>
-          <div id="mediaembed" class="menucontent ui-tabs-panel ui-widget-content ui-corner-bottom" id="mediaembed">
+          <div id="mediaembed" class="menucontent ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: block; ">
             <div id="mediaembedForm" name="mediaembedForm">
               <label for="mediaembedCode">Embed</label>
-              <input id="mediaembedCode" name="mediaembedCode" type="text" value="" readonly />
+              <input id="mediaembedCode" name="mediaembedCode" type="text" value="" readonly="">
             </div>
           </div>
-          <div id="mediaelink" class="menucontent ui-tabs-panel ui-widget-content ui-corner-bottom" id="mediaelink">
+          <div id="mediaelink" class="menucontent ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none; ">
             <div id="mediaelinkForm" name="mediaelinkForm">
               <label for="mediaelinkCode">URL</label>
-              <input id="mediaelinkCode" name="mediaelinkCode" type="text" value="" readonly />
+              <input id="mediaelinkCode" name="mediaelinkCode" type="text" value="" readonly="">
             </div>
           </div>
          
         </div>    <div id="medianode">
-          <div id="mediaregion">
-            <div id="mediabusy"><img src="../images/templates/default/busy.gif" /></div>
-            <div id="mediaplay"><img src="../images/templates/default/play.png" /></div>
-            <div id="mediapreview"></div>
+          <div id="mediaregion" style=""><div class="medialogo" style="overflow-x: hidden; overflow-y: hidden; width: 49px; height: 15px; "><a target="_blank" href="#"><img src="" style="display: none; "></a></div>
+            <div id="mediabusy"><img src="/images/templates/default/busy.gif" style=""></div>
+            <div id="mediaplay"><img src="/images/templates/default/play.png" style=""></div>
+            <div id="mediapreview" style="overflow-x: hidden; overflow-y: hidden; "></div>
             <div id="mediadisplay"></div>
           </div>
         </div> 
 
-		<div id="mediacontrol" class="ui-widget-header ui-corner-bottom">
+		<div id="mediacontrol" class="ui-widget-header ui-corner-bottom" style="">
           <div id="mediacontrolleft">
-            <div id="mediaplaypause" class="ui-state-default ui-corner-all">
+            <div id="mediaplaypause" class="ui-state-default ui-corner-all" style="cursor: pointer; ">
               <div class="on">
                 <span class="ui-icon ui-icon-play"></span>
               </div>
@@ -72,7 +69,7 @@
           </div>
           <div id="mediacontrolright">
             <div id="mediatotaltime">00:00</div>
-            <div id="mediamute" class="ui-state-default ui-corner-all">
+            <div id="mediamute" class="ui-state-default ui-corner-all" style="cursor: pointer; ">
               <div class="on" style="display:none">
                 <span class="ui-icon ui-icon-volume-off"></span>
               </div>
@@ -80,10 +77,10 @@
                 <span class="ui-icon ui-icon-volume-on"></span>
               </div>
             </div>
-            <div id="mediavolumebar">
+            <div id="mediavolumebar" style="cursor: pointer; ">
               <div id="mediavolume" class="ui-state-default">
                 <div id="mediavolumeupdate">
-                  <div id="mediavolumehandle">
+                  <div id="mediavolumehandle" style="margin-left: 0px; ">
                     <span class="ui-icon ui-icon-triangle-1-s"></span>
                   </div>
                   <div class="ui-state-active"></div>
@@ -92,15 +89,15 @@
             </div>
           </div>
           <div id="mediacontrolcenter">
-            <div id="mediaseekbar">
+            <div id="mediaseekbar" style="cursor: pointer; ">
               <div id="mediaseek" class="ui-state-default">
-                <div id="mediaseekupdate">
-                  <div id="mediaseekhandle">
+                <div id="mediaseekupdate" style="width: 0px; ">
+                  <div id="mediaseekhandle" style="margin-left: 0px; ">
                     <span class="ui-icon ui-icon-triangle-1-s"></span>
                   </div>
                   <div class="ui-state-active"></div>
                 </div>
-                <div id="mediaseekprogress"><div class="ui-state-hover"></div></div>
+                <div id="mediaseekprogress" style="width: 0px; "><div class="ui-state-hover"></div></div>
               </div>
             </div>
           </div>
@@ -108,24 +105,20 @@
 		
 		<div class="videos-list-title">Featured Videos</div>
 		
-      <div id="mediaplaylist">
+      <div id="mediaplaylist" style="">
         <div id="mediascrollwrapper">
-          <div id="mediabusy" class="ui-state-default ui-state-disabled"><img src="../images/templates/default/busy.gif" /></div>
+          <div id="mediabusy" class="ui-state-default ui-state-disabled"><img src="/images/templates/default/busy.gif" style=""></div>
           <div id="mediascroll" class="ui-helper-clearfix">
             <div id="mediascrollbarwrapper">
-              <div id="mediascrollup" class="ui-state-default"><span class="ui-icon ui-icon-triangle-1-n"></span></div>
+              <div id="mediascrollup" class="ui-state-default" style="cursor: pointer; "><span class="ui-icon ui-icon-triangle-1-n"></span></div>
               <div id="mediascrollbar">
-                <div id="mediascrolltrack" class="ui-widget-content">
-                  <div id="mediascrollhandle" class="ui-state-default"><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></div>
+                <div id="mediascrolltrack" class="ui-widget-content" style="cursor: pointer; ">
+                  <div id="mediascrollhandle" class="ui-state-default" style="margin-top: 0px; "><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></div>
                 </div>
               </div>
-              <div id="mediascrolldown" class="ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span></div>
-            </div>         <div id="medialistmask">
-              <div id="medialist">
-                <div id="mediateaser" class="ui-state-default">
-                  <div id="mediaimage" class="mediafield ui-widget-content" type="image" field="thumbnail"></div>
-                  <div id="mediatitle" class="mediafield ui-helper-clearfix" type="text" field="title">Sample Title</div>
-                </div>        </div>
+              <div id="mediascrolldown" class="ui-state-default" style="cursor: pointer; "><span class="ui-icon ui-icon-triangle-1-s"></span></div>
+            </div>         <div id="medialistmask" style="overflow-x: hidden; overflow-y: hidden; ">
+              <div id="medialist" style="margin-top: 0px; "></div>
             </div>
           </div>
         </div>
@@ -133,4 +126,4 @@
     </div>
 
 
-  </div></div><!--/media-centre-->
+  </div></div>

@@ -7,23 +7,26 @@
   
 <title> SAMBHRAMA SOURABHA </title>
 
-<%= stylesheet_link_tag "styles" %>
 
-<%= javascript_include_tag "jquery" %>
+
+<%= stylesheet_link_tag "application" %>
+<%= javascript_include_tag "application" %>
+
+
+
 
 <!--[if IE]><link rel="stylesheet" type="text/css" href="stylesheets/osmplayer_default_ie.css" /><![endif]-->
 <%= csrf_meta_tags %>
 
 
-
+	<a href="http://apycom.com/"></a>
 </head>
 
 <body>
 
 
-
 	<div id="header_wrap">
-	
+	 
 		<header class="section clearfix" id="header">
 		<div class="media-gallery-btn"><%= link_to('View Our Video Gallery', :controller=>'static' ,:action=>'video_gallery' ) %> </div></a>
 		
@@ -37,27 +40,36 @@
 	    </div>
 		
 	    <div class="social-icons">
-	    <a href="" class="fb-icon"></a>
+	   <a href="" class="fb-icon"></a>
 	    <a href="" class="twitter-icon"></a>
 	    </div>
 			
      </header>
-		
+
        <div class="main-navigation section">
 	    <h1></h1>
 		
 	    <div id="menu">
                 <ul class="menu">
-                <li><a href="#" class="parent"><span>Home</span></a>     
+                <li class="parent"><span><%= link_to 'Home',root_path %></span></a>     
                 </li>
-                <li><a href="#" class="parent"><span>Members</span></a>    
+                <li class="parent"><span><%= link_to 'Member', new_user_session_path %></span>    
                 </li>
-	        <li class="last"><span><%= link_to('Contact Us',:controller => 'static',:action =>'video_gallery') %></span></a></li>
+	        <li class="last"><span><%= link_to 'Contact Us', '/static/contact' %></span></a></li>
+                
+                
                 </ul>
 	    </div>
       </div>
 </div>
-	 
+	 		<div id="status">
+	 		<% if user_signed_in? %>
+						<%= link_to "Sign out", destroy_user_session_path, :method=>:delete %>
+					<% else %>
+						<%= link_to_unless_current "Sign up", new_user_registration_path %> | <%= link_to_unless_current "Sign in", new_user_session_path %>
+					<% end %>
+	        </div>
+	
 	<div id="large_bg_img">
 	<div id="large_bg_img_overlay"></div>
     <img width=100% src="/images/hampi.jpg" >
@@ -94,9 +106,10 @@
                 </div>
             </div>
         </div>
+	</div>
 	
 	
-	</div>	
+		
 	
 	
 		

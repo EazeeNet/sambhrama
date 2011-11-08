@@ -1,3 +1,4 @@
+
 <style>
 	#home_address, #business_address{
 		display: none;
@@ -17,9 +18,10 @@
 .ui-accordion .ui-accordion-content { padding: 0.1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
 .ui-accordion .ui-accordion-content-active { display: block; }
 </style>
-<%=javascript_include_tag 'reguser/jquery.blockUI'%>
+<%=javascript_include_tag "userinfo/jquery.blockUI" %>
 <script>
-$(function(){
+
+$(document).ready(function(){
   $("#accordion").accordion({
       change: function(event, ui) {
       $('.ui-accordion-content').css('height','');
@@ -35,8 +37,11 @@ $(function(){
 	})
 });
 </script>
+
+<div id="container" class="clearfix">
 Welcome <%=current_user.email%>
 <br/>
+
 
 <div id="accordion">
     <h3><a href="#">Demographic Information</a></h3>
@@ -160,4 +165,6 @@ Welcome <%=current_user.email%>
     <div>Second content</div>
     <h3><a href="#">Become a Member</a></h3>
     <div>Third content</div>
+</div>
+</div>
 </div>

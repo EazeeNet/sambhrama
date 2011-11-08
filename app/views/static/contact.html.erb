@@ -1,28 +1,155 @@
+<%= stylesheet_link_tag "contactus/validationEngine.jquery" %>
+<%= stylesheet_link_tag "contactus/contact" %>
 
 
-<h2>Contact</h2>
-<% form_for :user do |form| %>
+<%= javascript_include_tag "contactus/jquery.validationEngine" %>
+<%= javascript_include_tag "contactus/jquery.validationEngine-en" %>
 
+<script>
 
-<%= form.label :name %>
-<%= form.text_field :name %>
+jQuery(document).ready(function () {
 
-<%= form.label :address %>
-<%= form.text_field :address %>
+jQuery("#contact_form").validationEngine();
+ 
+            
+});
 
-<%= form.label :phoneno %>
-<%= form.text_field :phoneno %>
-
-<%= form.label :email %>
-<%= form.text_field :email %>
-
-<%= form.label :comment %>
-<%= form.text_field :comment %>
-
-
-<%= submit_tag "Login!", :class => "submit" %>
+</script>
 
 
 
 
-<% end %>
+<div id="wrapper">
+	<div class="container">
+	
+					<div class="isidepage-bg">
+					<h2>We are here. Get in touch</h2>
+					
+					<p>It's good to talk! So why not drop us an email or give us a call, the office is usually open from 8AM CST to 4PM CST on weekdays. 
+The attorneys at Popovits & Robinson are dedicated to rendering superior legal services to our clients.</p>
+					
+					</div>
+					
+									
+					<div class="contact-left">
+					<h2>Contact Information</h2>
+					
+					<div class="c1">
+					<strong id="addrbg"> Address </strong>
+					<span>
+					B.V.R. Plaza, No 85/A
+                    8th main, Rajajinagar 1-N block
+                    <br>
+				    Bengaluru 560 001
+                    India
+					<br><br>
+					1003 martin Luther King Drive<br>
+					Bloomington, IL 61701
+					</span>
+					
+					</div>
+					
+					<div class="c1">
+					<strong id="mailbg"> E-mail </strong>
+					<span>
+					<b>General Information</b> <b><a href=“mailto:jmarshall@email.com”>:vishwasgs@crossechannel.com</b><br>
+					<b>Umesh Kumar</b> <b> <a href=“mailto:jmarshall@email.com”>:umesh.kumar@crossechannel.com</b><br>
+			
+					</span>
+					
+					</div>
+					
+					<div class="c1">
+					<strong id="phonebg"> Phone </strong>
+					<span>
+					+919591489606<br>
+				    +919987116362
+					</span>
+					
+					</div>
+					
+				  <div style="display:none; *margin-left:-9999px; *height:0px; *position:relative; *top:-500px; *display:block ">
+	              <div id="mapBox" >
+   	  <iframe width="550" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=20635+Abbey+Woods+Court,+Suite+301+Frankfort&amp;sll=41.515086,-87.847549&amp;sspn=0.009753,0.026157&amp;vpsrc=6&amp;g=20635+Abbey+Woods+Court,+Suite+301+Frankfort&amp;ie=UTF8&amp;hq=&amp;hnear=20635+Abbey+Woods+Ct+N,+Frankfort,+Illinois+60423,+United+States&amp;t=m&amp;ll=41.523166,-87.843075&amp;spn=0.028917,0.047121&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                  </div>
+                  </div>
+
+				  
+				  <div style="display:none; *margin-left:-9999px; *height:0px; *position:relative; *top:-500px; *display:block ">
+	              <div id="mapBox2" >
+   	 <iframe width="550" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1003+martin+Luther+King+Drive+Bloomington&amp;aq=&amp;sll=41.521688,-87.838268&amp;sspn=0.039007,0.104628&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=1003+Martin+Luther+King+Dr,+Bloomington,+Illinois+61701,+United+States&amp;t=m&amp;ll=40.509362,-89.014835&amp;spn=0.058731,0.094242&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+                  </div>
+                  </div>
+
+					
+					<a id="inline" href="#mapBox" ><img src="/images/1003 Martin.png" class="map-img"></a>
+					
+					<a id="inline2" href="#mapBox2" ><img src="/images/20635.png" class="map-img" style="float:right"></a>
+					
+
+
+										
+					</div> <!-- contact-left ends here-->
+
+
+
+<div class="contact-left contact-form" id="contact_form">
+					<h2>Contact Us</h2>
+					
+				    <%= form_for  @contact_us, :url => { :action => "contact" } do |f| %>	
+				    
+				   
+				
+					<label>Name</label>
+					 <%= f.text_field :name ,:size=>36, :class=>"validate[required,showPrompt[Name is Required]] text-input", :id=>"name", :title=>"[Name Is Required]" %>
+				
+					<br>
+			        
+			        <label>Phone</label>
+				     <%= f.text_field :phoneno,:size=>36, :class=>"validate[required,custom[phone]] text-input text-input", :id=>"phone" %> 
+				
+					<br>
+			        
+			        <label>Email</label>
+					<%= f.text_field :email,:size=>36, :class=>"validate[required,custom[email]] text-input", :id=>"email" %>
+				
+					<br>
+				
+					<label>Comment</label>
+					<%= f.text_area :comment,:size => "35x12", :class=>"validate[minSize[6]] text-input", :id=>"comment" %>
+					
+					<br>
+				
+		            <%= f.submit "Submit" %> 
+                    <% end %>
+				
+</div>
+ 
+                   <div class="footer">
+					
+                    <div class="copy-right-text">
+					<p>Copyright &copy; 2011 Sambharama Sourabha. All rights reserved. </p>
+					</div>
+					
+				
+					<div class="developed-by">
+					<span>Powered by</span> <a href="http://www.crossechannel.com" target="_blank">Crosse Channel</a>
+					</div>
+					
+					</div>
+
+
+
+
+
+</div> <!-- container ends here -->
+</div> <!-- wrapper ends here -->
+  
+  
+ 
+
+  
+
+
+
+

@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20111103071511) do
     t.integer  "business_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "communication_id"
   end
 
   create_table "admin_users", :force => true do |t|
@@ -107,12 +108,7 @@ ActiveRecord::Schema.define(:version => 20111103071511) do
   end
 
   create_table "thought_of_days", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "thoughtofdays", :force => true do |t|
-    t.string   "title"
+    t.string   "string"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
